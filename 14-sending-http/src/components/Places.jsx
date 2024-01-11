@@ -15,7 +15,7 @@ export default function Places({
         <p className="fallback-text">{fallbackText}</p>
       )}
       {!isLoading && places.length > 0 && (
-        <ul className="places">
+        <ul className="places" key={title}>
           {places.map((place) => (
             <li key={place.id} className="place-item">
               <button onClick={() => onSelectPlace(place)}>
